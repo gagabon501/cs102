@@ -4,7 +4,7 @@
 using namespace std;
 
 int main() {
-    int a, b, c;
+    int a, b, c, insideExpression;
     float x1, x2;
 
     cout << "\nEnter a: ";
@@ -16,14 +16,16 @@ int main() {
     cout << "\nEnter c: ";
     cin >> c;
 
+    insideExpression = ((b * b) - (4 * a * c));
+
     x1 = (((b * -1) +  sqrt((b * b) - (4 * a * c)))) / (2 * a);
     x2 = (((b * -1) -  sqrt((b * b) - (4 * a * c)))) / (2 * a);
 
-    if (((b * b) - (4 * a * c)) < 0) {
+    if (insideExpression < 0) {
         cout << "\nRoots are imaginary\n\n";
-    } else if (x1 == x2){
+    } else if (insideExpression == 0){
         cout << "\nRoots are real and equal\n\n";
-    } else if (x1 != x2) {
+    } else {
         cout << "\nRoots are real and unequal\n\n";
     }
 

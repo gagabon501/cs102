@@ -3,7 +3,8 @@
 #include <cmath>
 using namespace std;
 
-bool checkPrime(int n) {
+// Utilized here a function to check if a number is a Prime number or not. Makes the code modular and easy to maintain.
+bool isPrime(int n) {
     bool isPrime = true;
     if (n <= 0) {
         return false;
@@ -48,8 +49,8 @@ int main() {
     cout << "\n************************************\n";
     for (int i = startNum; i <= endNum; i++) {
         if (i%7 == 0 ) {
-            cout << i << (i < endNum ? "," : "") ;
-        }
+            cout << i << ((endNum - i) >= 7 ? ", " : ""); // ternary operation here to ensure there is no trailing comma at the last number
+        } 
     }
 
     cout << "\n\nPrime Numbers";
@@ -57,7 +58,7 @@ int main() {
     cout << "Prime List between (" << startNum << " and " << endNum << "): ";
 
     for (int i = startNum; i <= endNum; i++) {
-        if (checkPrime(i)) {
+        if (isPrime(i)) {
             cout << i << " " ;
             totPrime++;
         }

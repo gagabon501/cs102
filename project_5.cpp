@@ -17,9 +17,8 @@ int main() {
     cout << "\nGuess a number in between 1 and 10\n";
 
     srand((unsigned) time(NULL)); //seed the rand() function with time() to ensure you do not get the same random number generated
-    do {
-        randomNum = rand() % 10;
-    } while (randomNum == 0); //to make sure the number being generated is greater than zero
+    
+    randomNum = 1 + (rand() % 10);
 
     for (int i = 1; i <= 3; i++) {
         cout << "\nChoice " << i << ": Enter your answer: ";

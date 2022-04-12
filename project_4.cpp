@@ -11,11 +11,11 @@ int main() {
 
     cout << "\nAuckland Power - Customer Bill Generator";
     cout << "\n****************************************\n";
-    cout << "\nEnter Customer Name: ";
+    cout << "Enter Customer Name: ";
     cin >> customerName;
-    cout << "\nCustomer Number: ";
+    cout << "Customer Number: ";
     cin >> customerNumber;
-    cout << "\nEnter consumed units: ";
+    cout << "Enter consumed units: ";
     cin >> unitsConsumed;
 
     chunks100 = unitsConsumed / 100; //get how many chunks of 100 is there
@@ -36,7 +36,7 @@ int main() {
         extra_multiplier = 1; //rate applied to the extra units
     }
 
-    // Get the total amount to be paid - which the rate applied to the extra units from the number 100 chunks plus the factor of (100 * sum of the rates to be applied) --> used factorization here e.g. 100 * (0.80 + 0.50 + 0.30)
+    // Get the total amount to be paid --> which is the rate applied to the extra units from the number 100 chunks plus the factor of (100 * sum of the rates to be applied) --> used factorization here e.g. 100 * (0.80 + 0.50 + 0.30)
     amount = (extra > 0 ? extra * extra_multiplier : 0) + (100 * chunks100_multiplier);
 
     // Print the output
