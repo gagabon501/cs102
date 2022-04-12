@@ -23,7 +23,7 @@ int main() {
         {
             oddNum++;
         }
-        cout << randomNum << (i < 5 ? "," : "");
+        cout << randomNum << (i < 5 ? ", " : "");
     }
     cout << "\nNumber of even numbers in the list: " << evenNum;
     cout << "\nNumber of odd numbers in the list: " << oddNum << "\n";
